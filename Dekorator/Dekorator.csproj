@@ -43,6 +43,27 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Dekorator\Decorators\BestPassword.cs" />
+    <Compile Include="Dekorator\Decorators\ConcretePassword.cs" />
+    <Compile Include="Dekorator\MyPasswordWriter.cs" />
+    <Compile Include="Dekorator\PasswordDecorator.cs" />
+    <Compile Include="Dekorator\PasswordWriter.cs" />
+    <Compile Include="Fasada\CustomerPizza.cs" />
+    <Compile Include="Fasada\PizzaBake.cs" />
+    <Compile Include="Fasada\PizzaTopings.cs" />
+    <Compile Include="Fasada\PizzaDough.cs" />
+    <Compile Include="Fasada\PizzeriaKitchen.cs" />
+    <Compile Include="Interpreter\AbstractExpression.cs" />
+    <Compile Include="Interpreter\Context.cs" />
+    <Compile Include="Interpreter\NonterminalExpression.cs" />
+    <Compile Include="Interpreter\TerminalExpression.cs" />
+    <Compile Include="Kompozyt\Component.cs" />
+    <Compile Include="Kompozyt\Composite.cs" />
+    <Compile Include="Kompozyt\Leaf.cs" />
+    <Compile Include="Pelnomocnik\IPermisions.cs" />
+    <Compile Include="Pelnomocnik\Permisions.cs" />
+    <Compile Include="Pelnomocnik\ProxyPermisions.cs" />
+    <Compile Include="Pelnomocnik\UserPermisions.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
