@@ -1,13 +1,16 @@
 ﻿using Dekorator.Dekorator;
 using Dekorator.Dekorator.Decorators;
 using Dekorator.Fasada;
+using Dekorator.Intepreter_Languages;
 using Dekorator.Interpreter;
 using Dekorator.Kompozyt;
 using Dekorator.Pelnomocnik;
 using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace Dekorator
@@ -70,18 +73,40 @@ namespace Dekorator
 
 
             //INTERPRETER
-            var context = new Context();
-            var list = new List<AbstractExpression>();
+            //var context = new Context();
+            //var list = new List<AbstractExpression>();
 
-            list.Add(new TerminalExpression());
-            list.Add(new NonterminalExpression());
-            list.Add(new TerminalExpression());
-            list.Add(new TerminalExpression());
+            //list.Add(new TerminalExpression());
+            //list.Add(new NonterminalExpression());
+            //list.Add(new TerminalExpression());
+            //list.Add(new TerminalExpression());
 
-            foreach (AbstractExpression exp in list)
+            //foreach (AbstractExpression exp in list)
+            //{
+            //    Console.WriteLine(exp.Interpret(context));
+            //}
+
+            //INTERPRETER2
+            string cultureString = "";
+            ConsoleKeyInfo consoleKeyInfo = Console.ReadKey(true);
+            switch (consoleKeyInfo.Key)
             {
-                Console.WriteLine(exp.Interpret(context));
+                case ConsoleKey.P:
+                    new PlCulture();
+                    break;
+                case ConsoleKey.E:
+                    new EnCulture();
+                    break;
+                default:
+                    Console.WriteLine("Nieznany język");
+                    return;
             }
+            //string cultureString = Console.ReadLine();
+            CultureInfo cultureInfo = new CultureInfo(cultureString);
+            //Thread.CurrentThread.CurrentCulture = cultureInfo;
+            
+            Console.WriteLine(Resources.name);
+            Console.WriteLine(Resources.lastName);
             Console.Read();
         }
     }

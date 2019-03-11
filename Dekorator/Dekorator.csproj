@@ -53,6 +53,24 @@
     <Compile Include="Fasada\PizzaTopings.cs" />
     <Compile Include="Fasada\PizzaDough.cs" />
     <Compile Include="Fasada\PizzeriaKitchen.cs" />
+    <Compile Include="Intepreter_Languages\EnCulture.cs" />
+    <Compile Include="Intepreter_Languages\PlCulture.cs" />
+    <Compile Include="Intepreter_Languages\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Intepreter_Languages\Resources.en.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.en.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Intepreter_Languages\Resources.pl.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.pl.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Intepreter_Languages\SetCulture.cs" />
     <Compile Include="Interpreter\AbstractExpression.cs" />
     <Compile Include="Interpreter\Context.cs" />
     <Compile Include="Interpreter\NonterminalExpression.cs" />
@@ -69,6 +87,21 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <EmbeddedResource Include="Intepreter_Languages\Resources.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Intepreter_Languages\Resources.en.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.en.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Intepreter_Languages\Resources.pl.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.pl.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
